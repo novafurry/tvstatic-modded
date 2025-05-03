@@ -13,14 +13,14 @@
   buffercanvas.width = WIDTH;
   buffercanvas.height = HEIGHT;
   const randomColor = () => Math.floor(Math.random() * 256);
-  buffercanvas.fillStyle = 'rgb('+randomColor+','+randomColor+','+randomColor+")";
+  buffercanvas.fillStyle = 'rgb('+randomColor()+','+randomColor()+','+randomColor()+")";
 
   function rand(num) {
     return Math.floor(Math.random() * num);
   }
 
   function tvstatic(canvas, ctx, scale) {
-  buffercanvas.fillStyle = 'rgb('+randomColor+','+randomColor+','+randomColor+")";
+  buffercanvas.fillStyle = 'rgb('+randomColor()+','+randomColor()+','+randomColor()+")";
     
     scale = scale || 1;
     var h = canvas.height;
@@ -31,7 +31,7 @@
     for (var x = 0; x < WIDTH; x+=scale) {
       for (var y = 0; y < HEIGHT; y+=scale) {
         if (Math.round(Math.random()))
-  buffercanvas.fillStyle = 'rgb('+randomColor+','+randomColor+','+randomColor+")";
+  buffercanvas.fillStyle = 'rgb('+randomColor()+','+randomColor()+','+randomColor()+")";
           
           bufferctx.fillRect(x, y, scale, scale);
       }
@@ -46,7 +46,7 @@
 
     // draw some horizontal lines on the real canvas
     for (var y = rand(10); y < canvas.height; y += rand(10)) {
-  buffercanvas.fillStyle = 'rgb('+randomColor+','+randomColor+','+randomColor+")";
+  buffercanvas.fillStyle = 'rgb('+randomColor()+','+randomColor()+','+randomColor()+")";
       ctx.fillRect(0, y, canvas.width, rand(3));
     }
 
